@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Web App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Firebase Web App</h1>
+    <div>
+        <h2>Sensor Data</h2>
+        <p>Temperature: <span id="temperature">Loading...</span></p>
+        <p>Humidity: <span id="humidity">Loading...</span></p>
+        <p>Gas Level: <span id="gasValue">Loading...</span></p>
+        <p>LDR Value: <span id="ldrValue">Loading...</span></p>
+        <p>Motion Detected: <span id="motionDetected">Loading...</span></p>
+        <p>Vibration Detected: <span id="vibrationDetected">Loading...</span></p>
+    </div>
+    <div>
+        <h2>LED Controls</h2>
+        <button id="led1" onclick="toggleLED('led1')">OFF</button>
+        <button id="led2" onclick="toggleLED('led2')">OFF</button>
+        <button id="led3" onclick="toggleLED('led3')">OFF</button>
+        <button id="led4" onclick="toggleLED('led4')">OFF</button>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
