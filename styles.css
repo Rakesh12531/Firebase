@@ -1,47 +1,119 @@
+/* styles.css */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    color: #333;
     margin: 0;
-    padding: 0;
-}
-
-h1 {
-    text-align: center;
-    color: #4a90e2;
-}
-
-div {
-    margin: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    border-radius: 8px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-button {
-    padding: 10px 20px;
-    margin: 5px;
+    position: relative;
+  }
+  
+  header {
+    background: #ffffff;
+    color: #0072ff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5em;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 80px; /* Ensure there's space for the footer */
+  }
+  
+  .sensor-data, .led-controls {
+    color:#000000;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  
+  .sensor-data h2, .led-controls h2 {
+    margin: 0;
+    font-size: 2em;
+    color: #0072ff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .data-grid, .led-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .data-box, .led-box {
+    background: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .data-box:hover, .led-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .data-box h3, .led-box button {
+    margin: 0;
+    font-size: 1.2em;
+    color: #0072ff;
+  }
+  
+  .value {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  button {
+    background: #4caf50;
+    color: black;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 15px 20px;
+    border-radius: 10px;
     cursor: pointer;
-}
-
-button:active {
-    transform: scale(0.98);
-}
-
-button:focus {
-    outline: none;
-}
-
-button.ON {
-    background-color: #4caf50;
-    color: white;
-}
-
-button.OFF {
-    background-color: #f44336;
-    color: white;
-}
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
+  }
+  
+  button:hover {
+    background: #45a049;
+    transform: scale(1.05);
+  }
+  
+  footer {
+    background: #ffffff;
+    color: #0072ff;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .data-grid, .led-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

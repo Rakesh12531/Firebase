@@ -1,29 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Firebase Web App</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Home Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Firebase Web App</h1>
-    <div>
+  <div class="container">
+    <header>
+      <h1>Smart Home Dashboard</h1>
+    </header>
+    <main>
+      <section class="sensor-data">
         <h2>Sensor Data</h2>
-        <p>Temperature: <span id="temperature">Loading...</span></p>
-        <p>Humidity: <span id="humidity">Loading...</span></p>
-        <p>Gas Level: <span id="gasValue">Loading...</span></p>
-        <p>LDR Value: <span id="ldrValue">Loading...</span></p>
-        <p>Motion Detected: <span id="motionDetected">Loading...</span></p>
-        <p>Vibration Detected: <span id="vibrationDetected">Loading...</span></p>
-    </div>
-    <div>
+        <div class="data-grid">
+          <div class="data-box" id="temperature-box">
+            <h3>Temperature</h3>
+            <p id="temperature" class="value">--</p> °C
+          </div>
+          <div class="data-box" id="humidity-box">
+            <h3>Humidity</h3>
+            <p id="humidity" class="value">--</p> %
+          </div>
+          <div class="data-box" id="gas-box">
+            <h3>Gas Level</h3>
+            <p id="gasValue" class="value">--</p>
+          </div>
+          <div class="data-box" id="ldr-box">
+            <h3>LDR Value</h3>
+            <p id="ldrValue" class="value">--</p>
+          </div>
+          <div class="data-box" id="motion-box">
+            <h3>Motion Detected</h3>
+            <p id="motionDetected" class="value">--</p>
+          </div>
+          <div class="data-box" id="vibration-box">
+            <h3>Vibration Detected</h3>
+            <p id="vibrationDetected" class="value">--</p>
+          </div>
+        </div>
+      </section>
+      <section class="led-controls">
         <h2>LED Controls</h2>
-        <button id="led1" onclick="toggleLED('led1')">OFF</button>
-        <button id="led2" onclick="toggleLED('led2')">OFF</button>
-        <button id="led3" onclick="toggleLED('led3')">OFF</button>
-        <button id="led4" onclick="toggleLED('led4')">OFF</button>
-    </div>
-    <script type="module" src="script.js"></script>
+        <div class="led-grid">
+          <div class="led-box">
+            <button id="led1" onclick="toggleLED('led1')">LED 1 OFF</button>
+          </div>
+          <div class="led-box">
+            <button id="led2" onclick="toggleLED('led2')">LED 2 OFF</button>
+          </div>
+          <div class="led-box">
+            <button id="led3" onclick="toggleLED('led3')">LED 3 OFF</button>
+          </div>
+          <div class="led-box">
+            <button id="led4" onclick="toggleLED('led4')">LED 4 OFF</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Smart Home Dashboard. All rights reserved.</p>
+    </footer>
+  </div>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
